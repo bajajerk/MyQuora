@@ -1,27 +1,123 @@
-<div class="createTweet">
+<main>
+	<div id ="leftMain" >
+	</div>
 
-<%= form_for @question, remote: true do |f| %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="middleMain">
+
+
+<div class ="createQuestion">
+	<%= form_for @question, remote: true do |f| %>
 
 <%= f.label :content %> <br>
 <%= f.text_area :content %>  <br>
 
 <%= f.label :subject %> <br>
 <%= f.text_area :question %>  <br>
-
-  <div class="field">
-        <%= f.label "Ask anonymous" %> <br />
-        <%= f.check_box :anonymous, {}, true, false %> <br />
-    </div>
-
-<div class="actions">
+<%= f.label "Ask anonymous" %> 
+<%= f.check_box :anonymous, {}, true, false %> 
 <%= f.submit  %>
-</div>
-<% end %>
 
+<% end %>
+</div>
 
 
 <%  @questions.each do |question| 
 	%>
 
-<%= render 'question', question: question %>
+<% if question.anonymous %>
+Anonymous 
+<% else %>
+<%= question.User.email %>
+<% end %>
+
+asked
+  
+<%= question.content %>
+
+<%= form_for @answer, remote: true do |f| %>
+
+<%= f.text_area :content %>  <br>
+<input type="hidden" name="questionId" value="<%= question.id %>">
+<%= f.submit  %>
+<% end %>
+
+<%= link_to 'Upvote', url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id), method: :post %>
+<br>
+
+
+
+<% particulars=@answers.where(:question_id => question.id) %>
+
+<% particulars.each do |answer| %>
+<%= answer.User.email %>
+answered
+<%= answer.content %>
+<%= link_to 'Upvote', url_for(controller: 'upvote_answers', action: 'toggle_upvote', answer_id: answer.id), method: :post %>
+<br>
+
+<% end %>
 	<% end %>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id ="rightMain">
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
