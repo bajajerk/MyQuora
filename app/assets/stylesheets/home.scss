@@ -38,7 +38,26 @@ main
 	  div#middleMain
 	  {
 	  	width: 60%;
+	  div.createQuestion{
+			textarea{
+				width: 90%;
+				padding-left: 4px;
+				padding-top: 4px;
+			}
+		}
+		  div.question{
+                border: 1px solid black;
+                display: flex;
+                flex-direction:column;
+                width: 90%;
+                padding: 6px;
+                textarea
+                {
+                	width: 70%;
+                	padding-top: 5px;
+                }
 	  }
+	}
 	    div#rightMain
 	  {
 	  	width: 20%;
