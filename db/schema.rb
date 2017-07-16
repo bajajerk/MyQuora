@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716074401) do
+ActiveRecord::Schema.define(version: 20170716090425) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "User_id"
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 20170716074401) do
   end
 
   add_index "questions", ["User_id"], name: "index_questions_on_User_id"
+
+  create_table "upvote_questions", force: :cascade do |t|
+    t.integer  "question_id"
+    t.integer  "User_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "upvote_questions", ["User_id"], name: "index_upvote_questions_on_User_id"
+  add_index "upvote_questions", ["question_id"], name: "index_upvote_questions_on_question_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

@@ -12,11 +12,15 @@ asked
 <%= form_for @answer, remote: true do |f| %>
 
 <%= f.text_area :content %>  <br>
-<input type="hidden" name="questionId" value="question.id">
+<input type="hidden" name="questionId" value="<%= question.id %>">
 <%= f.submit  %>
 <% end %>
 
-<% @answers.each do |answer| %>
+
+
+<% particulars=@answers.where(:question_id => question.id) %>
+
+<% particulars.each do |answer| %>
 <%= answer.User.email %>
 answered
 <%= answer.content %>
