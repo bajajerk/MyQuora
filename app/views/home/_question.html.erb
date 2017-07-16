@@ -16,6 +16,9 @@ asked
 <%= f.submit  %>
 <% end %>
 
+<%= link_to 'Upvote', url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id), method: :post %>
+<br>
+
 
 
 <% particulars=@answers.where(:question_id => question.id) %>

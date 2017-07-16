@@ -9,6 +9,7 @@ class UpvoteQuestionsController < ApplicationController
 			# @is_liked = false	
 		else
 			UpvoteQuestion.create(user: current_user, question: @question)
+			return redirect_to '/'
 			# @is_liked = true
 		end
 
