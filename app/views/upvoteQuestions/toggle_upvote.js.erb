@@ -1,0 +1,13 @@
+
+<% if @is_upVotedQ %>
+$('#upvoteQuestion_<%= @question.id%>').html("Cancel Upvote");
+noty({text: 'Tweet was Liked', type: 'alert'});
+
+<% else %>
+
+$('#upvoteQuestion_<%= @question.id%>').html("Upvote");
+noty({text: 'Tweet was UnLiked', type: 'alert'});
+
+<% end %>
+
+

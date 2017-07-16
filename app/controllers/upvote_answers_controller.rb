@@ -6,12 +6,12 @@ class UpvoteAnswersController < ApplicationController
 		upvoteAnswer = UpvoteAnswer.where(user: current_user, answer: @answer).first
 		if upvoteAnswer
 			upvoteAnswer.destroy!
-				return redirect_to '/'
-			# @is_upvotedQuestion = false	
+				# return redirect_to '/'
+			@is_upvotedQuestion = false	
 		else
 			UpvoteAnswer.create(user: current_user, answer: @answer)
-			return redirect_to '/'
-			# @is_upvotedQuestion = true
+			# return redirect_to '/'
+			@is_upvotedQuestion = true
 		end
 
 		# respond_to do |format|
