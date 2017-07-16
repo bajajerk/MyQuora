@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#mainPage'
   post '/toggle' => 'upvote_questions#toggle_upvote'
+    post '/toggle2' => 'upvote_answers#toggle_upvote'
+
+
 
 
   # Example of regular route:

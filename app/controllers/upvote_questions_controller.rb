@@ -6,6 +6,7 @@ class UpvoteQuestionsController < ApplicationController
 		upvoteQuestion = UpvoteQuestion.where(user: current_user, question: @question).first
 		if upvoteQuestion
 			upvoteQuestion.destroy!
+				return redirect_to '/'
 			# @is_liked = false	
 		else
 			UpvoteQuestion.create(user: current_user, question: @question)
