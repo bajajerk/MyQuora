@@ -1,5 +1,6 @@
 <main>
 	<div id ="leftMain" >
+	Trending 
 	</div>
 
 
@@ -46,6 +47,23 @@
 
 
 <div class ="question">
+
+
+<!-- picture ka kaam
+ -->
+ <div class="left">
+<div class="userImage">
+			
+<% if question.User.profile_picture %>
+	<img src="/uploads/<%=question.User.profile_picture %>">
+<% end %>
+
+		</div>
+	</div>
+
+
+
+
 <% if question.anonymous %>
 Anonymous 
 <% else %>

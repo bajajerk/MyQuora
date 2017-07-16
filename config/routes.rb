@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post '/toggle' => 'upvote_questions#toggle_upvote'
     post '/toggle2' => 'upvote_answers#toggle_upvote'
 
+  get '/profile' => 'home#profile'
+    post '/upload_image' => 'home#upload_image'
+
 
 
 

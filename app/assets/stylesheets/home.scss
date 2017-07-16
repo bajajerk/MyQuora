@@ -46,6 +46,23 @@ main
 			}
 		}
 		  div.question{
+		  	    div.left{
+                    width: 50px;
+                    div.userImage{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 20px;
+                        background-color: white;
+
+                        img{
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 20px;
+                        }
+                    }
+
+
+                }
                 border: 1px solid black;
                 display: flex;
                 flex-direction:column;
