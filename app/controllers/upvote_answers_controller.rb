@@ -7,11 +7,11 @@ class UpvoteAnswersController < ApplicationController
 		if upvoteAnswer
 			upvoteAnswer.destroy!
 				return redirect_to '/'
-			# @is_liked = false	
+			# @is_upvotedQuestion = false	
 		else
 			UpvoteAnswer.create(user: current_user, answer: @answer)
 			return redirect_to '/'
-			# @is_liked = true
+			# @is_upvotedQuestion = true
 		end
 
 		# respond_to do |format|

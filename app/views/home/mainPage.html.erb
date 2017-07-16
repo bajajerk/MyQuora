@@ -80,8 +80,9 @@ asked
 <input type="hidden" name="questionId" value="<%= question.id %>">
 <%= f.submit  %>
 <% end %>
-
+<div id: "upvoteQuestion_#{question.id}" >
 <%= link_to 'Upvote', url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id), method: :post %>
+</div>
 <br>
 
 

@@ -8,6 +8,7 @@ class HomeController < ApplicationController
             @questions = Question.all
             @answer=Answer.new
             @answers = Answer.all
+            
 	end
 
 
