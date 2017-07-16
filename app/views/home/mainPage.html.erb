@@ -1,0 +1,27 @@
+<div class="createTweet">
+
+<%= form_for @question, remote: true do |f| %>
+
+<%= f.label :content %> <br>
+<%= f.text_area :content %>  <br>
+
+<%= f.label :subject %> <br>
+<%= f.text_area :question %>  <br>
+
+  <div class="field">
+        <%= f.label "Ask anonymous" %> <br />
+        <%= f.check_box :anonymous, {}, true, false %> <br />
+    </div>
+
+<div class="actions">
+<%= f.submit  %>
+</div>
+<% end %>
+
+
+
+<%  @questions.each do |question| 
+	%>
+
+<%= render 'question', question: question %>
+	<% end %>

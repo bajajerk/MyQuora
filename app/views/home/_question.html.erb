@@ -1,0 +1,28 @@
+<br>
+<% if question.anonymous %>
+Anonymous 
+<% else %>
+<%= question.User.email %>
+<% end %>
+
+asked
+  
+<%= question.content %>
+
+<%= form_for @answer, remote: true do |f| %>
+
+<%= f.text_area :content %>  <br>
+<input type="hidden" name="questionId" value="question.id">
+<%= f.submit  %>
+<% end %>
+
+<% @answers.each do |answer| %>
+<%= answer.User.email %>
+answered
+<%= answer.content %>
+<br>
+
+<% end %>
+
+
+		
