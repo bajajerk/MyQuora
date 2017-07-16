@@ -94,7 +94,7 @@ asked
 <%= answer.User.email %>
 answered
 <%= answer.content %>
-<%= link_to 'Upvote', url_for(controller: 'upvote_answers', action: 'toggle_upvote', answer_id: answer.id), method: :post%>
+<%= link_to 'Upvote', url_for(controller: 'upvote_answers', action: 'toggle_upvote', answer_id: answer.id),id: "upvoteAnswer_#{answer.id}", method: :post,:remote => true%>
 <br>
 
 <% end %>

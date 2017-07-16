@@ -13356,3 +13356,689 @@ ActionView::MissingTemplate (Missing template upvote_questions/toggle_upvote, ap
 
   Rendered /home/mayank/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.8ms)
   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "upvote_questions"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 05:09:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#mainPage as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 10]]
+  Rendered home/mainPage.html.erb within layouts/application (179.5ms)
+Completed 200 OK in 663ms (Views: 573.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-07-17 05:09:34 +0530
+
+
+Started GET "/assets/upvote_answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-07-17 05:09:34 +0530
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-07-17 05:09:34 +0530
+
+
+Started GET "/assets/upvote_questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-07-17 05:09:34 +0530
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:09:35 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUpvoteQuestion Load (0.2ms)[0m  [1mSELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "upvote_questions" ("user_id", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["question_id", 1], ["created_at", "2017-07-16 23:39:35.514726"], ["updated_at", "2017-07-16 23:39:35.514726"]]
+  [1m[35m (98.3ms)[0m  commit transaction
+  Rendered upvote_questions/toggle_upvote.js.erb (0.6ms)
+Completed 200 OK in 132ms (Views: 6.3ms | ActiveRecord: 100.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 05:15:15 +0530
+Processing by HomeController#mainPage as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 2]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered home/mainPage.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 92ms (Views: 86.7ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:15:17 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUpvoteQuestion Load (0.2ms)[0m  SELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_questions" WHERE "upvote_questions"."id" = ?  [["id", 33]]
+  [1m[36m (67.2ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_questions/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 2.7ms | ActiveRecord: 67.8ms)
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:15:19 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUpvoteQuestion Load (0.2ms)[0m  SELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_questions" ("user_id", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["question_id", 1], ["created_at", "2017-07-16 23:45:19.530666"], ["updated_at", "2017-07-16 23:45:19.530666"]]
+  [1m[36m (79.7ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_questions/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 2.6ms | ActiveRecord: 80.4ms)
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:15:20 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUpvoteQuestion Load (0.2ms)[0m  SELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_questions" WHERE "upvote_questions"."id" = ?  [["id", 34]]
+  [1m[36m (79.9ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_questions/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 2.6ms | ActiveRecord: 80.5ms)
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:15:21 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUpvoteQuestion Load (0.2ms)[0m  SELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_questions" ("user_id", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["question_id", 1], ["created_at", "2017-07-16 23:45:21.908242"], ["updated_at", "2017-07-16 23:45:21.908242"]]
+  [1m[36m (104.3ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_questions/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 2.6ms | ActiveRecord: 105.0ms)
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:15:22 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUpvoteQuestion Load (0.4ms)[0m  SELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_questions" WHERE "upvote_questions"."id" = ?  [["id", 35]]
+  [1m[36m (71.2ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_questions/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 79ms (Views: 2.5ms | ActiveRecord: 72.5ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:15:23 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.1ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:45:24.021773"], ["updated_at", "2017-07-16 23:45:24.021773"]]
+  [1m[36m (124.6ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.6ms)
+Completed 200 OK in 152ms (Views: 5.4ms | ActiveRecord: 126.3ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:15:25 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 16]]
+  [1m[36m (82.3ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 2.5ms | ActiveRecord: 83.1ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:15:26 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:45:26.077026"], ["updated_at", "2017-07-16 23:45:26.077026"]]
+  [1m[36m (98.0ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.0ms)
+Completed 200 OK in 106ms (Views: 2.5ms | ActiveRecord: 98.7ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:15:26 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 17]]
+  [1m[36m (111.8ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 2.9ms | ActiveRecord: 112.4ms)
+
+
+Started POST "/toggle2?answer_id=5" for 127.0.0.1 at 2017-07-17 05:15:27 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 5  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 14]]
+  [1m[36m (112.1ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 118ms (Views: 2.5ms | ActiveRecord: 112.7ms)
+
+
+Started POST "/toggle2?answer_id=5" for 127.0.0.1 at 2017-07-17 05:15:28 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"5"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 5  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 5], ["created_at", "2017-07-16 23:45:28.518513"], ["updated_at", "2017-07-16 23:45:28.518513"]]
+  [1m[36m (211.2ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 225ms (Views: 2.7ms | ActiveRecord: 214.1ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:15:29 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.3ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:45:29.054934"], ["updated_at", "2017-07-16 23:45:29.054934"]]
+  [1m[36m (64.8ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.0ms)
+Completed 200 OK in 73ms (Views: 2.5ms | ActiveRecord: 65.5ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "upvote_answers"
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:15:49 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (1.1ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 19]]
+  [1m[36m (83.7ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 2.6ms | ActiveRecord: 85.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "upvote_answers"[0m
+
+
+Started POST "/toggle?question_id=1" for 127.0.0.1 at 2017-07-17 05:16:54 +0530
+Processing by UpvoteQuestionsController#toggle_upvote as JS
+  Parameters: {"question_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUpvoteQuestion Load (0.2ms)[0m  SELECT  "upvote_questions".* FROM "upvote_questions" WHERE "upvote_questions"."user_id" = 1 AND "upvote_questions"."question_id" = 1  ORDER BY "upvote_questions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "upvote_questions" ("user_id", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["question_id", 1], ["created_at", "2017-07-16 23:46:54.316113"], ["updated_at", "2017-07-16 23:46:54.316113"]]
+  [1m[36m (110.5ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_questions/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 150ms (Views: 4.8ms | ActiveRecord: 112.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 05:16:56 +0530
+Processing by HomeController#mainPage as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 10]]
+  Rendered home/mainPage.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 109ms (Views: 95.3ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:16:59 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:46:59.103012"], ["updated_at", "2017-07-16 23:46:59.103012"]]
+  [1m[35m (72.1ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 4.8ms | ActiveRecord: 73.7ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "upvote_answers"
+
+
+Started POST "/toggle2?answer_id=6" for 127.0.0.1 at 2017-07-17 05:17:08 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 6  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?[0m  [["id", 3]]
+  [1m[35m (75.6ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.0ms)
+Completed 200 OK in 82ms (Views: 2.5ms | ActiveRecord: 76.2ms)
+
+
+Started POST "/toggle2?answer_id=7" for 127.0.0.1 at 2017-07-17 05:17:09 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 7  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["answer_id", 7], ["created_at", "2017-07-16 23:47:09.202757"], ["updated_at", "2017-07-16 23:47:09.202757"]]
+  [1m[35m (91.9ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 3.2ms | ActiveRecord: 92.5ms)
+
+
+Started POST "/toggle2?answer_id=8" for 127.0.0.1 at 2017-07-17 05:17:10 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 8  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["answer_id", 8], ["created_at", "2017-07-16 23:47:10.016913"], ["updated_at", "2017-07-16 23:47:10.016913"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 94ms (Views: 2.7ms | ActiveRecord: 86.6ms)
+
+
+Started POST "/toggle2?answer_id=9" for 127.0.0.1 at 2017-07-17 05:17:10 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 9  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?[0m  [["id", 4]]
+  [1m[35m (92.2ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 2.6ms | ActiveRecord: 92.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "upvote_answers"[0m
+
+
+Started POST "/toggle2?answer_id=12" for 127.0.0.1 at 2017-07-17 05:17:30 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 12  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["answer_id", 12], ["created_at", "2017-07-16 23:47:30.322514"], ["updated_at", "2017-07-16 23:47:30.322514"]]
+  [1m[35m (49.9ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 3.2ms | ActiveRecord: 50.7ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2017-07-17 05:17:35 +0530
+Processing by AnswersController#create as JS
+  Parameters: {"utf8"=>"✓", "answer"=>{"content"=>"klklkl"}, "questionId"=>"7", "commit"=>"Create Answer"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("content", "User_id", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "klklkl"], ["User_id", 1], ["question_id", 7], ["created_at", "2017-07-16 23:47:35.033540"], ["updated_at", "2017-07-16 23:47:35.033540"]]
+  [1m[35m (76.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 200 OK in 82ms (ActiveRecord: 77.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 05:17:35 +0530
+Processing by HomeController#mainPage as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 10]]
+  Rendered home/mainPage.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 69ms (Views: 64.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/toggle2?answer_id=13" for 127.0.0.1 at 2017-07-17 05:17:41 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"13"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mUpvoteAnswer Load (0.2ms)[0m  [1mSELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 13  ORDER BY "upvote_answers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["answer_id", 13], ["created_at", "2017-07-16 23:47:41.487580"], ["updated_at", "2017-07-16 23:47:41.487580"]]
+  [1m[35m (88.4ms)[0m  commit transaction
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 3.2ms | ActiveRecord: 89.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "upvote_answers"
+
+
+Started POST "/toggle2?answer_id=11" for 127.0.0.1 at 2017-07-17 05:20:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"11"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 11  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 11], ["created_at", "2017-07-16 23:50:24.250821"], ["updated_at", "2017-07-16 23:50:24.250821"]]
+  [1m[36m (102.4ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (1.4ms)
+Completed 200 OK in 197ms (Views: 10.3ms | ActiveRecord: 104.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "upvote_answers"[0m
+
+
+Started POST "/toggle2?answer_id=8" for 127.0.0.1 at 2017-07-17 05:23:17 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 8  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 22]]
+  [1m[36m (89.1ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.6ms)
+Completed 200 OK in 97ms (Views: 3.2ms | ActiveRecord: 89.8ms)
+
+
+Started POST "/toggle2?answer_id=8" for 127.0.0.1 at 2017-07-17 05:23:17 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"8"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 8  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 8], ["created_at", "2017-07-16 23:53:17.904951"], ["updated_at", "2017-07-16 23:53:17.904951"]]
+  [1m[36m (81.9ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 90ms (Views: 2.6ms | ActiveRecord: 82.6ms)
+
+
+Started POST "/toggle2?answer_id=8" for 127.0.0.1 at 2017-07-17 05:23:18 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 8  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 26]]
+  [1m[36m (98.3ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 2.6ms | ActiveRecord: 98.9ms)
+
+
+Started POST "/toggle2?answer_id=8" for 127.0.0.1 at 2017-07-17 05:23:18 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"8"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 8  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 8], ["created_at", "2017-07-16 23:53:18.272961"], ["updated_at", "2017-07-16 23:53:18.272961"]]
+  [1m[36m (79.2ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 2.7ms | ActiveRecord: 79.8ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:23:33 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 20]]
+  [1m[36m (86.3ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 2.6ms | ActiveRecord: 86.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-17 05:25:31 +0530
+Processing by HomeController#mainPage as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  [["question_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 10]]
+  Rendered home/mainPage.html.erb within layouts/application (264.7ms)
+Completed 200 OK in 682ms (Views: 639.2ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:25:36 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:55:36.776396"], ["updated_at", "2017-07-16 23:55:36.776396"]]
+  [1m[36m (54.2ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 100ms (Views: 27.4ms | ActiveRecord: 55.7ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:25:59 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 28]]
+  [1m[36m (121.8ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 155ms (Views: 3.3ms | ActiveRecord: 122.5ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:25:59 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:55:59.636570"], ["updated_at", "2017-07-16 23:55:59.636570"]]
+  [1m[36m (84.8ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 2.6ms | ActiveRecord: 85.4ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:25:59 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 29]]
+  [1m[36m (119.0ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 2.8ms | ActiveRecord: 119.5ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:26:00 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:56:00.089523"], ["updated_at", "2017-07-16 23:56:00.089523"]]
+  [1m[36m (74.6ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 85ms (Views: 2.7ms | ActiveRecord: 75.7ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:26:00 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 30]]
+  [1m[36m (80.1ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 2.6ms | ActiveRecord: 80.7ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:26:00 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "upvote_answers" ("user_id", "answer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["user_id", 1], ["answer_id", 4], ["created_at", "2017-07-16 23:56:00.616059"], ["updated_at", "2017-07-16 23:56:00.616059"]]
+  [1m[36m (57.3ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 4.2ms | ActiveRecord: 57.9ms)
+
+
+Started POST "/toggle2?answer_id=4" for 127.0.0.1 at 2017-07-17 05:26:00 +0530
+Processing by UpvoteAnswersController#toggle_upvote as JS
+  Parameters: {"answer_id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUpvoteAnswer Load (0.2ms)[0m  SELECT  "upvote_answers".* FROM "upvote_answers" WHERE "upvote_answers"."user_id" = 1 AND "upvote_answers"."answer_id" = 4  ORDER BY "upvote_answers"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "upvote_answers" WHERE "upvote_answers"."id" = ?  [["id", 31]]
+  [1m[36m (95.0ms)[0m  [1mcommit transaction[0m
+  Rendered upvote_answers/toggle_upvote.js.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 2.6ms | ActiveRecord: 95.5ms)
