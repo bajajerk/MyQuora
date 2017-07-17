@@ -81,7 +81,7 @@ asked
 <%= f.submit  %>
 <% end %>
 
-<%= link_to 'Upvote', url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id),id: "upvoteQuestion_#{question.id}", method: :post ,:remote => true%>
+<%= link_to question.upVoted_string(current_user.id), url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id),id: "upvoteQuestion_#{question.id}", method: :post ,:remote => true%>
 
 
 <br>
@@ -94,7 +94,7 @@ asked
 <%= answer.User.email %>
 answered
 <%= answer.content %>
-<%= link_to 'Upvote', url_for(controller: 'upvote_answers', action: 'toggle_upvote', answer_id: answer.id),id: "upvoteAnswer_#{answer.id}", method: :post,:remote => true%>
+<%= link_to answer.upVoted_string(current_user.id), url_for(controller: 'upvote_answers', action: 'toggle_upvote', answer_id: answer.id),id: "upvoteAnswer_#{answer.id}", method: :post,:remote => true%>
 <br>
 
 <% end %>
