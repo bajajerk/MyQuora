@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<h1>
+Quora.com
+</h1>
+Welcome <%= @user.email %>
+</br>
+<% ques = @questions.where(User_id: @user.id).count %>
+<% ans = @answers.where(User_id: @user.id).count %>
+You have asked <%= ques %>  questions uptill now and answerd <%= ans %> uptill now
+
+
+</body>
+</html>

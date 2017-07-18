@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/profile' => 'home#profile'
     post '/upload_image' => 'home#upload_image'
+  get '/profilePage' => 'home#profilePage'
 
 
 

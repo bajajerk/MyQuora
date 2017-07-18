@@ -13,6 +13,7 @@
 
 	<div id ="leftMain" >
 	Trending 
+	<%= @questions.count %>
 	</div>
 
 
@@ -65,9 +66,12 @@
  <div class="left">
 <div class="userImage">
 			
-<% if question.User.profile_picture %>
+<% if question.User.profile_picture  && !question.anonymous %>
 	<img src="/uploads/<%=question.User.profile_picture %>">
+	<% else %>
+
 <% end %>
+
 
 		</div>
 	</div>
@@ -84,15 +88,18 @@ Anonymous
 asked
   
 <%= question.content %>
+<%= link_to question.upVoted_string(current_user.id), url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id),id: "upvoteQuestion_#{question.id}", method: :post ,:remote => true%>
 
+
+<div class="answerForm">
 <%= form_for @answer, remote: true do |f| %>
 
 <%= f.text_area :content %>  <br>
 <input type="hidden" name="questionId" value="<%= question.id %>">
 <%= f.submit  %>
 <% end %>
+</div>
 
-<%= link_to question.upVoted_string(current_user.id), url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id),id: "upvoteQuestion_#{question.id}", method: :post ,:remote => true%>
 
 
 <br>

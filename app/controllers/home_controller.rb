@@ -11,6 +11,17 @@ class HomeController < ApplicationController
             
 	end
 
+  def profilePage
+     
+     @questions = Question.all
+     
+     @answers = Answer.all
+
+     @user=current_user
+
+  end
+
+
 
 
 
