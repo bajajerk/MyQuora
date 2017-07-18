@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+
+
 <main>
+
 	<div id ="leftMain" >
 	Trending 
 	</div>
-
 
 
 
@@ -89,7 +100,8 @@ asked
 
 
 <% particulars=@answers.where(:question_id => question.id) %>
-
+<button class="accordion">Answers</button>
+<div class="panel">
 <% particulars.each do |answer| %>
 <%= answer.User.email %>
 answered
@@ -98,9 +110,17 @@ answered
 <br>
 
 <% end %>
-
+</div>
 </div>
 	<% end %>
+
+
+
+
+
+
+
+
 	
 
 
@@ -184,3 +204,24 @@ answered
 
 
 </main>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+</body>
+</html>

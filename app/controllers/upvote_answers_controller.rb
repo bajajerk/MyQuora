@@ -7,7 +7,8 @@ class UpvoteAnswersController < ApplicationController
 		if upvoteAnswer
 			upvoteAnswer.destroy!
 				# return redirect_to '/'
-			@is_upVotedA = false	
+
+			@is_upVotedA = false
 		else
 			UpvoteAnswer.create(user: current_user, answer: @answer)
 			# return redirect_to '/'
@@ -17,6 +18,6 @@ class UpvoteAnswersController < ApplicationController
 		respond_to do |format|
 			format.js {}
 		end
+
 		
 	end
-end
