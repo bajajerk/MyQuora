@@ -8,6 +8,7 @@ class HomeController < ApplicationController
             @questions = Question.all
             @answer=Answer.new
             @answers = Answer.all
+            @users=User.all
             
 	end
 
@@ -18,6 +19,28 @@ class HomeController < ApplicationController
      @answers = Answer.all
 
      @user=current_user
+
+  end
+
+
+
+
+  def makeadmin
+    user = User.find(params[:member_id])
+    user.admin!
+    return redirect_to '/'
+
+
+  end
+
+
+
+
+  def disableadmin
+    user = User.find(params[:admin_id])
+    user.member!
+    return redirect_to '/'
+
 
   end
 

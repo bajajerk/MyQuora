@@ -9,8 +9,8 @@ class QuestionsController < ApplicationController
 
   # GET /questions/1
   # GET /questions/1.json
-  # def show
-  # end
+  def show
+  end
 
   # GET /questions/new
   # def new
@@ -18,8 +18,9 @@ class QuestionsController < ApplicationController
   # end
 
   # GET /questions/1/edit
-  # def edit
-  # end
+  def edit
+    # byebug
+  end
 
   # POST /questions
   # POST /questions.json
@@ -31,7 +32,7 @@ class QuestionsController < ApplicationController
       if @question.save
         format.html { redirect_to '/', notice: 'Question was successfully created.' }
         format.json { render :show, status: :created, location: @question }
-        QuestionCreated.notifyAddQues(current_user.email,@question.content).deliver_now
+        # QuestionCreated.notifyAddQues(current_user.email,@question.content).deliver_now
 
       else
         format.html { render '/' }
@@ -42,24 +43,25 @@ class QuestionsController < ApplicationController
 
   # PATCH/PUT /questions/1
   # PATCH/PUT /questions/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @question.update(question_params)
-  #       format.html { redirect_to @question, notice: 'Question was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @question }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @question.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+  
+    respond_to do |format|
+      if @question.update(question_params)
+        format.html { redirect_to '/', notice: 'Question was successfully updated.' }
+        format.json { render '/' , status: :ok, location: @question }
+      else
+        format.html { render :edit }
+        format.json { render json: @question.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /questions/1
   # DELETE /questions/1.json
   def destroy
     @question.destroy
     respond_to do |format|
-      format.html { redirect_to questions_url, notice: 'Question was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

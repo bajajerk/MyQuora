@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :answers, only: [:create, :destroy]
-  resources :questions, only: [:create, :destroy]
+  resources :questions, only: [:create, :destroy, :edit , :update]
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     post '/upload_image' => 'home#upload_image'
   get '/profilePage' => 'home#profilePage'
 
+
+  post '/makeadmin' => 'home#makeadmin'
+
+post '/disableadmin' => 'home#disableadmin'
 
 
 

@@ -6,5 +6,19 @@ class User < ActiveRecord::Base
 
 
 
-         enum role: [ :banned , :commonUser , :moderator , :admin ]
+       enum role: {banned: -1, guest: 0, member: 1, moderator: 2, admin: 3 }  
+
+
+
+
+
+       	def self.amIAdmin currentUserId
+       		if User.roles[User.find(currentUserId).role] > User.roles["moderator"]
+       			return true
+       		else
+       			return false
+       		end
+
+       	end
+
 end

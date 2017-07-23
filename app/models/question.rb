@@ -3,7 +3,8 @@ class Question < ActiveRecord::Base
 
 
 
-    def upVoted_by user_id
+  def upVoted_by user_id
+    # puts "user_id",user_id,"user_id"
   	UpvoteQuestion.where(question_id: id, User_id: user_id).length > 0
   end
 
@@ -16,5 +17,26 @@ class Question < ActiveRecord::Base
   	end
 
   end
+
+
+
+
+   def can_modify questionKeUserKiId , currentUserID
+
+    if User.roles[User.find(currentUserID).role] > User.roles["member"]
+       return true
+     else
+       questionKeUserKiId == currentUserID
+     end
+ 
+  end
+
+
+
+
+
+
+
+
 
 end

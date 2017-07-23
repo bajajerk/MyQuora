@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170721183825) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "profile_picture"
-    t.integer  "role"
+    t.integer  "role",                   default: 0
   end
 
   add_index "Users", ["email"], name: "index_users_on_email", unique: true

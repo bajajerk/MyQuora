@@ -12,8 +12,62 @@
 <main>
 
 	<div id ="leftMain" >
-	Trending 
-	<%= @questions.count %>
+
+	<% if User.amIAdmin current_user.id %>
+	Make admins and moderators
+	<br>
+	<br>
+
+
+
+
+	<h3> Members </h3>
+	<% @users.member.each do |member| %>
+	<br>
+
+	<%= member.email %>
+	<%= link_to 'Make admin', url_for(controller: 'home', action: 'makeadmin', :member_id => member.id), method: :post %>
+	<% end %>
+
+
+	<br>
+	<br>
+
+
+
+
+	<h3> Moderators </h3>
+	<% @users.moderator.each do |moderator| %>
+	<br>
+	<%= moderator.email %>
+	<%= link_to 'Make admin', url_for(controller: 'home', action: 'makeadmin', :member_id => moderator.id), method: :post %>
+
+	<% end %>
+
+
+     <br>
+	<br>
+
+
+
+
+	<h3> Admin </h3>
+	<% @users.admin.each do |admin|  %>
+	<br>
+	<% if admin.email == "admin@gmail.com" %>
+	<% next %>
+	<% end %>
+	<%= admin.email %>
+		<%= link_to 'Disable admin powers ', url_for(controller: 'home', action: 'disableadmin', :admin_id => admin.id), method: :post %>
+
+	<% end %>
+
+
+
+
+
+	<% end %>
+
 	</div>
 
 
@@ -89,6 +143,21 @@ asked
   
 <%= question.content %>
 <%= link_to question.upVoted_string(current_user.id), url_for(controller: 'upvote_questions', action: 'toggle_upvote', question_id: question.id),id: "upvoteQuestion_#{question.id}", method: :post ,:remote => true%>
+
+
+
+
+<% if question.can_modify question.User.id, current_user.id %>
+        <%= link_to 'Edit', edit_question_path(question) %>
+<% end %>
+
+
+<% if question.can_modify question.User.id, current_user.id %>
+<%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+
+
 
 
 <div class="answerForm">
