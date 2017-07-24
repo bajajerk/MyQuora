@@ -63,6 +63,8 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to '/', notice: 'Question was successfully destroyed.' }
       format.json { head :no_content }
+            format.js   { render :layout => false }
+
     end
   end
 

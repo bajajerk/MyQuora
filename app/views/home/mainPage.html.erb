@@ -153,7 +153,7 @@ asked
 
 
 <% if question.can_modify question.User.id, current_user.id %>
-<%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Destroy', question, method: :delete , :remote => true, :class => 'delete_pony' %>
 <% end %>
 
 
