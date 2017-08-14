@@ -14,6 +14,14 @@ Rails.application.routes.draw do
     post '/upload_image' => 'home#upload_image'
   get '/profilePage' => 'home#profilePage'
 
+post'/userapi/signin'
+post'/userapi/signup'
+get '/userapi/logout'
+post '/question/create'
+post'/questionapi/create'
+
+
+
 
   post '/makeadmin' => 'home#makeadmin'
 

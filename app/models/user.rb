@@ -21,4 +21,10 @@ class User < ActiveRecord::Base
 
        	end
 
+        def logout
+          self.accesstoken = nil
+         self.save
+        end
+
+
 end
